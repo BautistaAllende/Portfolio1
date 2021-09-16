@@ -1,0 +1,393 @@
+@font-face{
+    font-family: Prime;
+    src: url(../Font/Aqua/aqua.ttf);
+}
+@keyframes blur{
+    from{filter: blur(2px);}
+    to{filter: blur(0px);}
+}
+@keyframes colors{
+    0%{color: rgba(184, 127, 127, 0.884);}
+    50%{color: rgba(167, 121, 121, 0.884);}
+    100%{color: rgba(184, 127, 127, 0.884);}
+}
+@keyframes pri{
+    0%{
+        opacity: 100%;
+        filter: blur(0%);
+    }
+    25%{
+        opacity: 0%;
+        filter: blur(100%);
+    }
+    50%{
+        opacity: 100%;
+        filter: blur(0%);
+    }
+    72%{
+        opacity: 0%;
+        filter: blur(0%);
+    }
+    100%{
+        opacity: 100%;
+        filter: blur(0%);
+    }
+}
+@keyframes seg{
+    0%{
+        opacity: 0%;
+        filter: blur(0%);
+    }
+    25%{
+        opacity: 100%;
+        filter: blur(100%);
+    }
+    50%{
+        opacity: 0%;
+        filter: blur(0%);
+    }
+    100%{
+        opacity: 0%;
+        filter: blur(0%);
+    }
+}
+
+:root{
+    --shadow: -0.1em -0.1em 2em 0.5em  #ff914898;
+    --text-shadow: -0.1em -0.1em 2em 0.5em #ff9148ab;
+    --text-shadow2: -0.1em -0.1em 1em 0.1em #e6af8d;
+    --shadow-white: 0.1em 0.1em 5em 1em rgba(255, 192, 203, 0.116);
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 0.6em;
+    background: rgba(128, 128, 128, 0);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(102, 49, 49, 0.356);
+    border-radius: 1em;
+    transition: 5s;
+}
+
+body{
+    background-attachment: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #2C3558;
+    animation: 2s blur;
+}
+
+
+
+/* Fondo animado */
+.fondo{
+    z-index: -10;
+    position: absolute;
+}
+.pri{
+    position: absolute;
+    animation: 6s infinite;
+    width: auto;
+}
+.seg{
+    position: absolute;
+    animation: 6s pri infinite;
+}
+
+
+
+/* Barra superior */
+.barra_inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    transition: 1s;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn;
+    animation-duration: 2s;
+    width: auto;
+    padding-top: 1em;
+}
+.boton{
+    border-radius: 0.0.5em;
+    margin: 1em 1em 1em 0;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 1s;
+    text-emphasis-color: none;
+    padding: 0 0.5em 0.2em 0.3em;
+    color: #ccaab273;
+    background-color: rgba(128, 128, 128, 0.041);
+    opacity: 80%;
+    scroll-behavior: smooth 1s;
+}
+.boton:hover{
+    transform: translateY(-0.05em);
+    opacity: 77%;
+    background-color: rgba(206, 163, 163, 0.151);
+    cursor: pointer;
+}
+
+
+/* Barras laterales */
+.barra_izquierda{
+    width: 9em;
+    height: 2em;
+    background-color: #9fb5d3b4;
+    color: rgba(0, 0, 255, 0);
+    background: linear-gradient(to left, #616d9c00, #d39f9f);
+    transition: 2s; 
+    animation: fadeIn;
+    animation-duration: 3s;
+}
+.barra_izquierda:hover{
+    width: 10em;
+}
+.barra_derecha{
+    width: 9em;
+    height: 2em;
+    background: linear-gradient(to right, #616d9c00, #d39f9f);
+    color: rgba(0, 0, 255, 0);  
+    transition: 2s; 
+    animation: fadeIn;
+    animation-duration: 3s;
+}
+.barra_izquierda:hover{
+    width: 10em;
+}
+
+
+/* Titulos */
+.titulos{
+    margin: 7em 0 0 0;
+    background-color: #616d9c;
+    background: linear-gradient(to right, #737eaa17, #616d9c96 50%, #737eaa17);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0.1em 0.1em 5em 1em rgba(255, 192, 203, 0.137);
+    animation: fadeIn;
+    animation-duration: 3s;
+}
+
+
+/* Titulo */
+.titulo {
+    font-family: Prime;
+    font-size: 5em;
+    text-align: center;
+    color: #d39f9f;
+    text-transform:uppercase;
+    transition: 2s;
+    text-shadow: var(--text-shadow);
+    z-index: 1;
+    animation: fadeIn;
+    animation-duration: 3s;
+    padding: 0.5em 0 0 0;
+}
+.titulo:hover {
+    color: rgba(155, 110, 110, 0.63);
+    transform: translateY(-0.05em);
+}
+.titulo_portfolio{
+    font-family: Prime;
+    font-size: 2.3em;
+    text-align: center;
+    color: rgba(199, 179, 179, 0.884);
+    text-transform:uppercase;
+    transition: 2s;
+    text-shadow: var(--text-shadow);
+    z-index: 1;
+    animation: fadeIn;
+    animation-duration: 3s;
+    padding: 0em 0 0em 0;
+}
+
+
+
+/* Barras */
+.barra2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* Skills */
+#Skills{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10em;
+}
+.Skills{
+    margin-left: 2em;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+}
+.lista_1, .lista_2, .lista_3, .lista_4, .lista_5, .lista_6{
+    width: 20em;
+    padding: 3em 0 0 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #616d9c;
+    animation: 4s fadeIn;
+}
+.web, .Services, .Interests, .Abilities, .Data_Base{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.3em 0em 1em 0em;
+    margin-bottom: 1em;
+    color: rgba(199, 179, 179, 0.884);
+}
+/* Boton Arriba */
+.boton_arriba{
+    width: 2em;
+    transform: rotate(90deg);
+    opacity: 70%;
+}
+.boton_funcion{
+    border-radius: 50em;
+    position: absolute;
+    width: 2em;
+    opacity: 70%;
+    transition: 1s;
+}
+.boton_funcion:hover{
+    opacity: 50%;
+    transform: translateY(0.2em);
+}
+
+
+
+
+
+/* Pantalla carga */
+.loader {
+    position: fixed;
+    margin-top: -10em;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../Media/fondo_carga.jpg);
+    opacity: .8;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .trianguloderecha{
+    width: 961px;
+    height: 411px;
+    height: auto;
+    justify-content: left;
+}
+.trianguloizquierda{
+    width: 954px;
+    justify-content: right;
+    height: 412px;
+} */
+
+/* .foto_triangulos{
+    display: flex;
+    justify-content:center;
+    padding-top: 1.5em;
+    position: relative;
+    animation: fadeIn;
+    animation-duration: 2s;
+    margin-top: 5em;
+} */
+
+/* 
+.caja_color{
+    position: absolute;
+    justify-content: center top;
+    border: solid 0.5em #e6af8d;
+    border-radius: 4em;
+    padding-bottom: 15.8em;
+    color: rgba(240, 230, 140, 0);
+    padding-left: 17.5em;
+    background-color: #e6af8d;
+    opacity: 20%;
+    transition: 1s;
+    transition-delay: 0.3s;
+    box-shadow: var(--shadow);
+    z-index: 2;
+    padding-right: 1.01em;
+}
+.caja_color:hover{
+    opacity: 0%;
+    box-shadow: var(--shadow);
+} */
+
+/* .espacio_medio_arriba{
+    background-color: #ff9148;
+    opacity: 50%;
+    position: relative;
+    padding: 4em 100% 0 100%;
+    margin-top: 10em;
+    background: linear-gradient(to top, #ff9148c5, #ff914800 70%);
+}
+.espacio_medio_abajo{
+    background-color: #ff9148;
+    opacity: 50%;
+    position: absolute;
+    padding: 4em 100% 0 100%;
+    margin-top: -1em;
+    background: linear-gradient(to bottom, #ff9148c5, #ff914800);
+} */
+
+/* Seccion media
+.bloques p{
+    width: 18em;
+    height: 4em;
+    color: rgba(255, 105, 180, 0);
+    opacity: 40%;
+}
+.medio{
+    background: linear-gradient(to left, rgba(173, 115, 115, 0.363), rgba(0, 0, 255, 0));
+}
+.medio_{
+    background: linear-gradient(to right, rgba(173, 115, 115, 0.363), rgba(0, 0, 255, 0));
+    animation: fadeIn;
+    animation-duration: 2s;
+}
+.bloques{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    animation: fadeIn;
+    animation-duration: 2s;
+}
+.foto_cara{
+    width: 20em;
+    height: 18.01em;
+    border-radius: 4em;
+    opacity: 100%;
+    position: relative;
+    transition: 0.4s;
+    transition-duration: 2s;
+    border: solid 0.1em #e6af8d42;
+    padding: 0 0.4em 0 0.4em;
+    background-color: #e6af8d36;
+    z-index: 1;
+} */

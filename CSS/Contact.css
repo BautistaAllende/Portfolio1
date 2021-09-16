@@ -1,0 +1,252 @@
+.ico{
+    size: cover;
+}
+
+@font-face{
+    font-family: Prime;
+    src: url(../Font/Aqua/aqua.ttf);
+}
+@keyframes blur{
+    from{filter: blur(5px);}
+    to{filter: blur(0px);}
+}
+@keyframes pri{
+    0%{
+        opacity: 100%;
+        filter: blur(0%);
+    }
+    50%{
+        opacity: 0%;
+        filter: blur(100%);
+    }
+    100%{
+        opacity: 100%;
+        filter: blur(0%);
+    }
+}
+@keyframes seg{
+    0%{
+        opacity: 0%;
+        filter: blur(100%);
+    }
+    50%{
+        opacity: 100%;
+        filter: blur(0%);
+    }
+    100%{
+        opacity: 0%;
+        filter: blur(100%);
+    }
+ }
+
+::-webkit-scrollbar{
+    width: 0.1em;
+    background-image: url(../Media/fondo_estatica.jpg);
+}
+:root{
+    --color-hover: #8654352a;
+    --background-color-hover: #9c6d7436;
+}
+body{
+    background-color: #2C3558;
+	overflow-x: hidden;
+    overflow-y: scroll;
+    animation: 1s blur;
+}
+
+
+
+/* Animacion fondo */
+.fondo{
+    z-index: -10;
+    position: absolute;
+    opacity: 50%;
+    
+}
+.pri{
+    position: absolute;
+    animation: 5s seg infinite;
+}
+.seg{
+    position: absolute;
+    animation: 5s pri infinite;
+}
+
+
+
+/* Barra superior */
+a{
+    border-radius: 0.2em;
+    margin: 1em 1em 1em 0.3em;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 1s;
+    text-emphasis-color: none;
+    padding: 0 0.5em 0.2em 0.3em;
+    color: #ccaab273;
+    background-color: rgba(128, 128, 128, 0.041);
+    border-radius: 0.0.5em;
+    opacity: 80%;
+    scroll-behavior: smooth 1s;
+}
+a:hover{
+    transform: translateY(-0.05em);
+    opacity: 77%;
+    background-color: rgba(206, 163, 163, 0.151);
+    cursor: pointer;
+}
+.barra_inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    transition: 1s;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+
+
+/* Titulo */
+.titulo {
+    font-size: 2em;
+    text-align: center;
+    color: #d39f9f;
+    text-transform:uppercase;
+    font-family: Prime;
+    transition: 2s;
+    padding-left: 1em;
+    padding-right: 1em;
+    animation: fadeIn;
+    animation-duration: 2s;
+}
+.titulo:hover {
+    color: #c29d9f;
+    transform: translateY(-0.05em);
+}
+
+
+
+/* Formulario */
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2em 1em 4em 1em;
+    width: 25em;
+    height: 25em;
+    background-color: #dcbbc338;
+    border-radius: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 1.5s;
+    animation: fadeIn;
+    animation-duration: 2s;
+    box-shadow: 0.1em 0.1em 5em 1em rgba(255, 192, 203, 0.116);
+}
+form:hover{
+    background: #dcbbc31c;
+    color: var(--color-hover);
+}
+button{
+    display: flex;
+    margin: auto;
+    background-color: #2C3558;
+    color: grey;
+    padding: 0.5em;
+    padding-right: -0.2em;
+    margin-bottom: -1.5em;
+    border: 0;
+    transition: 1s;
+ }
+button:hover{
+    transform: translateY(-0.2em);
+    background-color: var(--background-color-hover);
+    color: var(--color-hover);
+    cursor: pointer;
+ }
+.text_area{
+    width: 395px;
+    height: 8em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    background-color: #2C3558;
+    transition: 1s;
+    resize: none;
+    color: grey;
+    border: 0;
+}
+.text_area:hover{
+    transform: translateY(-0.2em);
+    background-color: var(--background-color-hover);
+    color: grey;
+}
+.text_area::selection{
+    background: rgba(128, 128, 128, 0.63);
+}
+input{
+    border: 0;
+    padding: 0.7em;
+    margin-bottom: 0.5em;
+    justify-content: center;
+    margin-bottom: 1em;
+    background-color: #2C3558;
+    transition: 1s;
+    color: rgba(63, 31, 31, 0.884);
+}
+input:hover{
+    transform: translateY(-0.1em);
+    background-color: var(--background-color-hover);
+    color: grey;
+}
+input:link  {
+    border-color: solid 1px black;
+    background-color: rgba(0, 0, 255, 0.26);
+}
+input::selection{
+    background: rgba(128, 128, 128, 0.637);
+}
+
+
+/* Barras laterales */
+.bloques p{
+    width: 9em;
+    height: 2em;
+    color: rgba(0, 0, 255, 0);  
+    transition: 2s; 
+    animation: fadeIn;
+    animation-duration: 3s;
+}
+.medio{
+    background: linear-gradient(to right, #616d9c00, #d39f9f);
+}
+.medio_{
+    background: linear-gradient(to left, #616d9c00, #d39f9f);
+}
+.bloques{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    animation: fadeIn;
+    animation-duration: 2s;
+}
+
+
+
+/* Pantalla carga */
+.loader{
+    position: fixed;
+    margin-top: -10em;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../Media/fondo_carga.jpg);
+    opacity: .8;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bautista Allende - Home</title>
+        <link rel="shortcut icon" href="Media/ico.png">
+        <link rel="stylesheet" href="CSS\normalize.css">
+        <link rel="stylesheet" href="CSS\index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $(".loader").fadeOut("slow");
+            });
+        </script>
+    </head>
+    <body>
+        <!-- Animacion Fondo -->
+        <section class="fondo">
+            <img class="pri" src="media/Salva_Pantallas/fondo_estatica1.png" alt="">
+            <img class="seg" src="media/Salva_Pantallas/fondo_estatica3.png" alt="">
+        </section>
+
+        
+        <section class="todo" id="arriba">
+
+            <!-- Barra superior -->
+            <section class="barra_inicio">
+                <a href="Contact.html" class="boton">
+                Contact
+                </a>
+                <a href="AboutMe.html" class="boton">
+                About Me
+                </a>
+                <nav class="seccion_proyectos"></nav>
+                <a href="#Skills" class="boton">
+                Skills
+                </nav>
+                </a>
+            </section>
+
+            <div class="titulos">
+            <!-- Titulo -->
+            <p class="titulo">Hi! my name is bautista allende, i'm a developer front-end and designer.</p>
+            <!-- Subtitulo -->
+            <div class="barra2">
+            <p class="subtitulo">My design and code are exclusively for each client</p>
+            <p class="subtitulo">with a <span class="otro_color"><i>simple and beautiful</i></span> format.</p>
+            </div>   
+            </div>    
+    </section>
+    </body>
+</html>

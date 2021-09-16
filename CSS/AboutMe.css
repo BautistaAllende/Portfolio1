@@ -1,0 +1,229 @@
+@keyframes blur{
+    from{filter: blur(5px);}
+    to{filter: blur(0px);}
+}
+@font-face{
+    font-family: Aquas;
+    src: url(../Font/Aqua/aqua.ttf);
+}
+@keyframes pri{
+    0%{
+        opacity: 100%;
+        filter: blur(0%);
+    }
+    50%{
+        opacity: 0%;
+        filter: blur(100%);
+    }
+    100%{
+        opacity: 100%;
+        filter: blur(0%);
+    }
+}
+@keyframes seg{
+   from{
+        opacity: 0%;
+        filter: blur(100%);
+        transform: scale(0em);
+    }
+    to{
+        opacity: 100%;
+        filter: blur(0%);
+        transform: scale(10em);
+    }
+}
+@keyframes gradiente{
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 50%;
+    }
+    50%{
+        opacity: 70%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+::-webkit-scrollbar{
+    width: 0.1em;
+    background-image: url(../Media/fondo_estatica.jpg);
+}
+:root{
+    --normal: #3c4774b7;
+    --fuerte: #2C3558;
+    --fuertesuave: #2c35588a;
+    --suave: #5a6694;
+    --suavesuave: #5a66948e;
+    --megasuave: #5a66943b; 
+    --blanco: #d8c0b3;
+}
+body{
+    background-color: var(--fuerte);
+    scroll-behavior: 1s;
+    animation: 1s blur;
+    overflow-x: hidden;
+}
+
+
+
+/* Fondo Animado */
+.fondo{
+    z-index: -10;
+    position: absolute;
+}
+.pri{
+    position: absolute;
+    animation: 7s infinite;
+}
+.seg{
+    position: absolute;
+    animation: 5s pri infinite;
+}
+
+
+
+
+/* Titulo */
+.titulo_about{
+    font-size: 2em;
+    text-align: center;
+    color: #d39f9f;
+    text-transform:uppercase;
+    font-family: Aquas;
+    transition: 2s;
+    padding-left: 1em;
+    padding-right: 1em;
+    animation: fadeIn;
+    animation-duration: 2s;
+}
+
+
+/* Barra Superior */
+.boton_back{
+    border-radius: 0.2em;
+    margin: 1em 1em 1em 0.3em;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 1s;
+    text-emphasis-color: none;
+    padding: 0 0.5em 0.2em 0.3em;
+    color: #ccaab273;
+    background-color: rgba(128, 128, 128, 0.041);
+    border-radius: 0.0.5em;
+    opacity: 80%;
+}
+.boton_back:hover{
+    transform: translateY(-0.05em);
+    opacity: 77%;
+    background-color: rgba(206, 163, 163, 0.151);
+    cursor: pointer;
+}
+.barra_inicio{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    position: relative;
+}
+
+
+
+/* Presentacion */
+.presentacion{
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    color: #d39f9f;
+    text-shadow: 0.1em 0em 1em rgba(255, 255, 255, 0.384);
+    text-transform: uppercase;
+    font-family: Aquas;
+    opacity: 80%;
+}
+
+/* Secciones */
+.seccion_1, .seccion_2{
+    padding: 1em 0 1em 0;
+    background: linear-gradient(to right, #616d9c00, #616d9c3d, #737eaa17 50%, #616d9c2f, #616d9c00);
+    box-shadow: 0.1em 0.1em 5em 1em rgba(255, 192, 203, 0.137);
+    animation: fadeIn 4s;
+}
+
+
+
+/* Boton */
+.boton{
+    margin: 1em 1em 1em 0;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 1s;
+    text-emphasis-color: none;
+    padding: 0 0.5em 0.2em 0.3em;
+    color: #ccaab273;
+    background-color: rgba(128, 128, 128, 0.041);
+    opacity: 80%;
+    scroll-behavior: smooth 1s;
+    width: -2em;
+}
+.boton:hover{
+    transform: translateY(-0.05em);
+    opacity: 77%;
+    background-color: rgba(206, 163, 163, 0.151);
+    cursor: pointer;
+}
+
+
+/* Foto cara */
+.foto_cara{
+    width: 12em;
+    border-radius: 10px;
+    border: solis 4px var(--suave);
+    background: linear-gradient(to top, var(--suave), rgba(255, 5, 5, 0));
+    filter:sepia(0.5);
+    animation: fadeIn 4s;
+    margin: 1em 0 0.5em 0;
+
+}
+
+/* Barras */
+.barras{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 5s;
+}
+.barra_izquierda{
+    width: 6em;
+    height: 1.5em;
+    color: rgba(128, 255, 0, 0);
+    background: linear-gradient(to left, #616d9c00, #d39f9faf);
+}
+.barra_derecha{
+    width: 6em;
+    height: 1.5em;
+    color: rgba(128, 255, 0, 0);
+    background: linear-gradient(to right, #616d9c00, #d39f9fab);
+}
+
+
+
+
+
+
+/* Pantalla Carga */
+.loader {
+    position: fixed;
+    margin-top: -10em;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../Media/fondo_carga.jpg);
+    opacity: .8;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+
+
